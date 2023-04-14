@@ -9,13 +9,7 @@ Console.WriteLine("");
 
 // Stampa elementi array in ordine di preferenza:
 
-Console.WriteLine("Cibi preferiti in ordine dal più al meno preferito: ");
-Console.WriteLine("");
-
-for (var i = 0; i < favoriteFoods.Length; i++)
-{
-    Console.WriteLine($"{i + 1}. {favoriteFoods[i]}");
-}
+printOrderedElements(favoriteFoods);
 
 Console.WriteLine("");
 
@@ -24,3 +18,15 @@ Console.WriteLine("");
 Console.WriteLine($"Il cibo che preferisco di più è: {favoriteFoods[0]}");
 Console.WriteLine($"il cibo che preferisco di meno è: {favoriteFoods[6]}");
 
+
+
+// Funzioni:
+
+void printOrderedElements(string[] array)
+{
+    for (var i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine((i + 1) + ". " + (array[i]));
+    }
+   
+}
